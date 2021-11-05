@@ -1,0 +1,20 @@
+//Motion Detection & Toilet Light Turn ON
+
+void setup()
+{
+  pinMode(0, INPUT);//pir sensor input
+  pinMode(1, OUTPUT);//relay 
+}
+
+void loop()
+{
+    if (digitalRead(0) == 1){
+    digitalWrite(1, HIGH);
+    delay(5000);//increase the delay as per your time required...
+  } 
+  else 
+  {
+    digitalWrite(1, LOW);
+  }
+  delay(10);
+}
